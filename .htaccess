@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+Options -Indexes
+RewriteEngine on
+RewriteRule ^photo-([0-9]+)$                /?pic=$1    [PT]
+RewriteRule ^page-([0-9a-zA-Z_]+)$                /?page=$1    [PT]
+IndexIgnore *.gif *.jpg *.JPG
