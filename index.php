@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="white-screen">
-	<div id="title"><img src="img/julienpellet.jpg"/></div>
+	<div id="title"><img src="img/JP.jpg"/></div>
 </div>
 <div id="container">
 	<div id="menu">
