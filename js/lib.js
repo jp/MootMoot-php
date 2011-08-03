@@ -118,16 +118,18 @@ var PelletStudio = {
 		}, 250);
 
 
-			var menuFX = new Fx.Tween('title', {property: 'margin-left',duration:1500,transition: Fx.Transitions.Back.easeOut});
-			menuFX.start(-1750,0).chain(
-				function(){
-					var whiteScreenFX = new Fx.Tween('white-screen', {property: 'opacity',duration:1000});
+			var myFunction = function(){ 
+					var whiteScreenFX = new Fx.Tween('white-screen', {property: 'opacity',duration:1500,link: 'chain'});
 					whiteScreenFX.start(1,0).chain(
 						function(){
 							$('white-screen').style.display="none";
 							$('menu').style.zIndex=2;
 						})
-			});
+ };
+			 
+			//wait 50 milliseconds, then call myFunction and bind myElement to it
+			myFunction.delay(1000); // alerts: 'moo! Element id is: ... '
+
 
 
 //		PelletStudio.displayRandomPictures();
@@ -531,11 +533,7 @@ After the first 20kms a $1 per km travel charge may apply.\
 
 	},
 	galleriesLoaded:function() {
-//		Element('div', {'id':"random-picture"}).inject($('content'));
-//		PelletStudio.displayRandomPictures();
-
 		PelletStudio.hashChanged();
-
 	},
 		
 	displayGallery:function(galleryName){
