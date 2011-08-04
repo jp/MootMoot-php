@@ -1,11 +1,13 @@
 <?php
+
+
 class dao {
 	private $connect=null;
 
 	function __construct() {
 		if (!$this->connect) {
 			/* connection a une base mysql en local */
-			$this->connect = new Mysqli("localhost","root","stellina","electronq001","3306");
+			$this->connect = new Mysqli("localhost","root","password","electronq001","3306");
 		}
 		
 		return $this->connect;
