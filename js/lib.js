@@ -117,22 +117,17 @@ var PelletStudio = {
 		    }
 		}, 250);
 
-
-			var myFunction = function(){ 
-					var whiteScreenFX = new Fx.Tween('white-screen', {property: 'opacity',duration:1500,link: 'chain'});
-					whiteScreenFX.start(1,0).chain(
-						function(){
-							$('white-screen').style.display="none";
-							$('menu').style.zIndex=2;
-						})
- };
-			 
-			//wait 50 milliseconds, then call myFunction and bind myElement to it
-			myFunction.delay(1000); // alerts: 'moo! Element id is: ... '
-
-
-
-//		PelletStudio.displayRandomPictures();
+		var menuFX = new Fx.Tween('title', {property: 'opacity',duration:1500});
+		menuFX.start(0,1).chain(
+			function(){
+				var whiteScreenFX = new Fx.Tween('white-screen', {property: 'opacity',duration:1500});
+				whiteScreenFX.start(1,0).chain(
+				function(){
+				$('white-screen').style.display="none";
+				$('menu').style.zIndex=2;
+				})
+			}
+		);
 
 		PelletStudio.getWindowSize();
 		PelletStudio.resizeContents();
