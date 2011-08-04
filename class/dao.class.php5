@@ -6,7 +6,6 @@ class dao {
 		if (!$this->connect) {
 			/* connection a une base mysql en local */
 			$this->connect = new Mysqli("localhost","root","stellina","electronq001","3306");
-//			$this->connect = new Mysqli("db370171575.db.1and1.com","dbo370171575","stellina","db370171575","3306");
 		}
 		
 		return $this->connect;
