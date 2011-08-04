@@ -1,2 +1,123 @@
 Mootools gallery by Julien Pellet
 http://julienpellet.com
+
+contact @ julienpellet.com
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.3.10deb1
+-- http://www.phpmyadmin.net
+--
+-- Serveur: localhost
+-- Généré le : Ven 05 Août 2011 à 10:13
+-- Version du serveur: 5.1.49
+-- Version de PHP: 5.3.3-7
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `electronq001`
+--
+DROP DATABASE `electronq001`;
+CREATE DATABASE `electronq001` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `electronq001`;
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `gallery`
+--
+
+DROP TABLE IF EXISTS `gallery`;
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `gallery_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `dir` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`gallery_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+
+--
+-- Contenu de la table `gallery`
+--
+
+INSERT INTO `gallery` (`gallery_id`, `name`, `dir`) VALUES
+(9, 'WELLINGTON', 'wellington'),
+(6, 'nature', 'nature'),
+(7, 'portraits', 'portraits'),
+(8, 'Fine Art', 'fine_art');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `picture`
+--
+
+DROP TABLE IF EXISTS `picture`;
+CREATE TABLE IF NOT EXISTS `picture` (
+  `picture_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dpublication` int(11) NOT NULL,
+  `file` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` text COLLATE utf8_unicode_ci NOT NULL,
+  `gallery_id` int(11) NOT NULL,
+  PRIMARY KEY (`picture_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=119 ;
+
+--
+-- Contenu de la table `picture`
+--
+
+INSERT INTO `picture` (`picture_id`, `dpublication`, `file`, `caption`, `gallery_id`) VALUES
+(28, 0, 'dsc_4601.jpg', 'The photographer Eye - Self portrait - Photography by Julien Pellet', 8),
+(108, 0, 'DSC_1127_topaz.jpg', 'Lake Wakatipu - Queenstown - Otago - New Zealand. Photography by Julien Pellet', 6),
+(107, 0, 'DSC_8200.JPG', 'Taranaki reflection, Pouakai Circuit, Egmont National Park, New Zealand. Photography by Julien Pellet', 6),
+(106, 0, 'DSC_2705_topaz.jpg', 'Moeraki Boulders - New Zealand East Cost. Photography by Julien Pellet', 6),
+(105, 0, '1DSC_2523.jpg', 'Study of a dead urchin. Bretagne, France. Photography by Julien Pellet', 8),
+(104, 0, 'DSC_8645.JPG', 'Les quais de l isere, Grenoble France. Photography by Julien Pellet', 8),
+(103, 0, 'DSC_8655.jpg', 'General Practitioners on Willis Street - Wellington - New Zealand. Photograph by Julien Pellet', 8),
+(102, 0, 'DSC_7444_topaz.jpg', 'Tongariro crossing - Tongariro National Park - New Zealand. Photography by Julien Pellet', 7),
+(101, 0, 'DSC_7512.JPG', 'Tongariro Alpine Crossing - New Zealand National Park', 6),
+(100, 0, 'dsc_5482.jpg', 'Universes in universe - Oil and water macro - Photography by Julien Pellet', 8),
+(99, 0, 'sky tower from albert park.jpg', 'Sky tower - Albert park - Auckland. Photography by Julien Pellet', 8),
+(98, 0, 'DSC_5479_3.jpg', 'Clemence - Photography by Julien Pellet', 7),
+(97, 0, 'DSC_1218.JPG', 'Brother Teodoro, from the Holy family congregation, in front of a Stellina cask, in the Kario distillery, Belley France. Photography by Julien Pellet', 7),
+(96, 0, 'DSC_3020.jpg', 'Servranckx - Grenoble museum - France. Photography by Julien Pellet', 8),
+(95, 0, 'DSC_6785_topaz.jpg', 'Rotorua Champagne Pool - New Zealand. Photography by Julien Pellet', 6),
+(94, 0, 'DSC_3436.jpg', 'Boiling water - Jacques Honvault style. Photography by Julien Pellet', 8),
+(93, 0, 'dsc_8952.jpg', 'Steps on pavement. Grenoble - France. Photography by Julien Pellet', 8),
+(92, 0, 'DSC_3609.JPG', 'Drink and drive ? Grenoble, France. Photography by Julien Pellet', 8),
+(91, 0, 'DSC_5324_REPRO.jpg', 'Lacs Roberts - Chamrousse - Isere - Belledonne - Grenoble - France. Photography by Julien Pellet', 6),
+(90, 0, 'DSC_9801.jpg', 'Untitled - Grenoble France. Photography by Julien Pellet', 7),
+(89, 0, 'DSC_6212_1280.JPG', 'Maori Marae - Waitangi - New Zealand. Photography by Julien Pellet', 8),
+(88, 0, 'DSC_6221_1280.JPG', 'Maori Canoe - Waitangi - New Zealand. Photography by Julien Pellet', 8),
+(87, 0, 'DSC_6250.JPG', 'Port waimoto - New Zealand. Photography by Julien Pellet', 6),
+(86, 0, 'DSC_6158_1280.JPG', 'Cape Reinga - New Zealand - Photography by Julien Pellet', 6),
+(81, 0, 'clemence.jpg', 'Clemence - Grenoble France - Photography by Julien Pellet', 7),
+(82, 0, 'DSC_4014_2.jpg', 'Self portrait and guitar, Abandoned warehouse, Rue Mozart, Grenoble France. Photography by Julien Pellet', 7),
+(83, 0, 'dsc_0078.jpg', 'Journee de l allaitement, Grenoble France. Photography by Julien Pellet', 7),
+(84, 0, 'DSC_2342_2.jpg', 'Long exposure on lake Hauroko - Self portrait - New Zealand - South Island. Photography by Julien Pellet', 6),
+(85, 0, 'DSC_8010_topaz.jpg', 'Taranaki volcano by night, New Plymouth, New Zealand. Photography by Julien Pellet', 6),
+(116, 0, 'DSC_5571_topaz_highkey_800.jpg', 'Te papa museum, Wellington, New Zealand. Photography by Julien Pellet', 9),
+(115, 0, 'DSC_8615.jpg', 'Water front, steam crane, Wellington, New Zealand. Photography by Julien Pellet', 9),
+(114, 0, 'DSC_8655.jpg', 'General Practitioners on Willis Street, Wellington New Zealand. Photography by Julien Pellet', 9),
+(113, 0, 'DSC_5520_2_800px_sepia.JPG', 'Civic center, Wellington New Zealand. Photography by Julien Pellet', 9),
+(111, 0, 'DSC_5136_800.jpg', 'Waterfront sculpture, Wellington, New Zealand. Photography by Julien Pellet', 9),
+(112, 0, 'DSC_5368_800.JPG', 'Sculpture on Lambton Quay, Wellington, New Zealand. Photography by Julien Pellet', 9),
+(117, 0, 'DSC_6550.JPG', 'Cosmic shop in Cuba Street, Wellington, New Zealand. Photography by Julien Pellet', 9),
+(118, 0, 'DSC_7568_2.JPG', 'Tongariro national park, New Zealand', 6);
+
+-- --------------------------------------------------------
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_gallery_picture` AS select `p`.`picture_id` AS `picture_id`,`p`.`file` AS `file`,`p`.`caption` AS `caption`,`p`.`dpublication` AS `dpublication`,`g`.`name` AS `gallery_name`,`g`.`dir` AS `dir` from (`gallery` `g` join `picture` `p`) where (`p`.`gallery_id` = `g`.`gallery_id`);
