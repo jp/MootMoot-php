@@ -22,12 +22,12 @@ a,a:active,a:hover,a:visited,a:link { outline-color:invert;outline-style:none;ou
     	-ms-filter: "alpha(opacity=0)"; /* IE 8 */
     	filter : alpha(opacity=0); /* IE < 8 */ 
 
-
+	height:1px;
 	font-size:30px;
 	font-weight:bolder;
 	color:white;
 	margin-left:auto;
-	top:30%;
+	top:40%;
 	position:relative;
 /*	font-family:"Times"; */
 	font-size:50px;
