@@ -44,6 +44,7 @@
 			<div class="menu-item"><a href="#contact">CONTACT</a></div>
 		</div>
 	</div>
+	<div id=""><img id="initiales" src="img/JP-inv.gif"/></div>
 	<div id="content"/>
 </div>
 		<div style='display:none'>
