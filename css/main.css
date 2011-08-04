@@ -18,6 +18,11 @@ a,a:active,a:hover,a:visited,a:link { outline-color:invert;outline-style:none;ou
 }
 
 #title{
+	opacity:0;
+    	-ms-filter: "alpha(opacity=0)"; /* IE 8 */
+    	filter : alpha(opacity=0); /* IE < 8 */ 
+
+
 	font-size:30px;
 	font-weight:bolder;
 	color:white;
