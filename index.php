@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/mootools.js"></script>
 	<script type="text/javascript" src="js/mootools-more.js"></script>
 	<script type="text/javascript" src="js/lib.js"></script>
-	
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </head>
 <body>
 <div id="white-screen">
@@ -103,5 +103,8 @@
 			}
 		?>
 		</div>
+	<div id="social">
+		<g:plusone></g:plusone>
+	</div>
 </body>
 </html>

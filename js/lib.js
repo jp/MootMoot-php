@@ -84,15 +84,36 @@ function initMouseOverThumb(){
 			},
 		    mouseout: function(){
 				thumb.tween('padding-top', 0);
-			},
-		    click:function(){
-//				PelletStudio.displayPic(thumb.id);
 			}
-
 		})
 	});
 }
 
+/*
+function IMPROVED_initMouseOverThumb(){
+	Array.each($$('img.mini'), function(thumb, index){
+	var overThumbEffect = new Fx.Morph(thumb,{transition: Fx.Transitions.Quint.easeOut, duration:300});
+
+	thumb.addEvents({
+		mouseenter: function(){
+			overThumbEffect.cancel();
+			overThumbEffect.start({
+			'margin-top': [0, 15]
+//			,'margin-left': [0, 3]  // Morphs the 'width' style from 900px to 300px.
+		});
+		},
+	    mouseout: function(){
+		overThumbEffect.cancel();
+		overThumbEffect.start({
+		    'margin-top': [15, 0]
+//		,'margin-left': [3, 0],'box-shadow':[0,10]  // Morphs the 'width' style from 900px to 300px.
+		})
+		}
+
+		})
+	});
+}
+*/
 
 
 
@@ -258,8 +279,8 @@ After the first 20kms a $1 per km travel charge may apply.\
 	displayContact:function() {
 		$('content').empty();
 		var about    = new Element('div', {'id':'contact'}).inject($('content'));
-		about.set("html","<center><strong>Julien Pellet - Wellington</strong><br>\
-021 028 66409<br><A HREF='mailto:contact@julienpellet.com'>contact@julienpellet.com</A></center>");
+		about.set("html","<strong>Julien Pellet - Wellington</strong><br>\
+021 028 66409<br><A HREF='mailto:contact@julienpellet.com'>contact@julienpellet.com</A>");
 		
 	},
 
