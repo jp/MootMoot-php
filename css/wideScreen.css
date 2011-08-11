@@ -178,11 +178,3 @@ a,a:active,a:hover,a:visited,a:link { outline-color:invert;outline-style:none;ou
 	position:absolute;
 /*	width:450px; */
 }
-
-#contact {
-	font-size:20px;
-	height:20%;
-	top:20%;
-	margin-left:20%;
-	position:absolute;
-}
